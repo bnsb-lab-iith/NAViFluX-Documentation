@@ -1,0 +1,15 @@
+/* Improve visual style of cards */
+.grid.cards > ul > li {
+  border: 1px solid #ddd;          /* light boundary */
+  border-radius: 12px;             /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* soft shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1rem;                   /* extra spacing */
+}
+
+/* Hover effect */
+.grid.cards > ul > li:hover {
+  transform: translateY(-4px);     /* slight lift */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  border-color: #3f51b5;           /* accent highlight */
+}
