@@ -50,9 +50,9 @@ Visit [BiGG Homepage](http://bigg.ucsd.edu/)
 
 ---
 
-### MATRIX File
+### NAViFluX File
 
-The **MATRX File (.json)** is specifically designed for this tool. It preserves all data, edits and pathways layouts assuring no loss in information.
+The **NAViFluX File (.json)** is specifically designed for this tool. It preserves all data, edits and pathways layouts assuring no loss in information.
 
 !!! tip 
     Best for **re-uploading saved models**  
