@@ -13,7 +13,7 @@ This feature is especially useful for:
 
 
 !!! important "Important"
-    It is recommended to understand the notations of nodes and edges to proceed further with the documentation. [Check out the Notations](./notations.md)
+    It is recommended to understand the notations of nodes and edges to proceed further with the documentation. [Check out the Notations](./../pathway-visualizer/notations.md)
 
 !!! info "Note"
     When a model is uploaded, the server automatically detects whether the model is from KEGG or BiGG. Based on the database, corresponding reactions will be fetched for the selected metabolite
