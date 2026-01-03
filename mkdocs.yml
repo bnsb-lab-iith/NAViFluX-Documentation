@@ -1,0 +1,174 @@
+site_name: NAViFluX
+site_description: "Metabolic Network Analysis and Visualization of Flux"
+
+nav:
+  - NAViFluX: index.md
+  - Installation: installation.md
+  - Pathway Visualiser:
+      - Overview: visualizer.md
+      - Notations: pathway-visualizer/notations.md
+      - Upload Options:
+          - Upload Model: pathway-visualizer/upload-file.md
+          - Upload Reaction Weight File: pathway-visualizer/upload-reaction-weight-file.md
+          - Upload Metabolite Weight File: pathway-visualizer/upload-metabolite-weight-file.md
+          - Upload Flux Weight File: pathway-visualizer/upload-flux-weight-file.md
+      - Pathway Editing:
+          - Add New Reaction: pathway-visualizer/add-new-reaction.md
+          - Fill Missing Reaction: pathway-visualizer/fill-missing-reaction.md
+          - Merge Pathways: pathway-visualizer/merge-pathways.md
+          - Delete Reaction: pathway-visualizer/delete-reaction.md
+      - Analysis Features:
+          - Centrality Analysis: pathway-visualizer/centrality-analysis.md
+          - Flux Analysis: pathway-visualizer/flux-analysis.md
+          - Pathway Enrichment: pathway-visualizer/gsea.md
+          - Over Representation Analysis: pathway-visualizer/over-representation-analysis.md
+      - Download Options:
+          - COBRA Model: pathway-visualizer/download-cobra-model.md
+          - Tool File: pathway-visualizer/download-tool-file.md
+          - Cytoscape File: pathway-visualizer/download-cytoscape-file.md
+          - Edge Lists: pathway-visualizer/download-edge-lists.md
+          - Image Export (4 Formats): pathway-visualizer/download-images.md
+      - Utility Features:
+          - Reset Button: pathway-visualizer/reset-button.md
+          - Settings Button: pathway-visualizer/settings-button.md
+  - Model Builder:
+      - Overview: builder.md
+      - Model Editing:
+          - Add New Reaction: model-builder/add-new-reaction.md
+          - Add Full Reaction: model-builder/add-full-reaction.md
+          - Fill Missing Reaction: model-builder/fill-missing-reaction.md
+          - Merge Canvas: model-builder/merge-canvas.md
+          - Delete Reaction: model-builder/delete-reaction.md
+      - Download Options:
+          - Model Export: model-builder/download-cobra-model.md
+          - Tool File: model-builder/download-tool-file.md
+          - Cytoscape File: model-builder/download-cytoscape-file.md
+          - Edge Lists: model-builder/download-edge-lists.md
+          - Image Export (4 Formats): model-builder/download-images.md
+  - Case Studies:
+      - Case Study 1: case-studies/case-study-1.md
+      - Case Study 2: case-studies/case-study-2.md
+      - Case Study 3: case-studies/case-study-3.md
+
+
+theme:
+#   custom_dir: docs/overrides
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.footer
+    # - header.autohide
+    - repository.icon       # shows GitHub icon
+    - repository.url        # links to repo
+    - repository.metadata
+    # - toc.integrate
+    # - navigation.tabs.sticky
+    - content.action.edit
+    - search.suggest
+    - content.code.copy
+    - content.tooltips
+    - content.tabs.link
+    - content.code.copy
+    - math
+
+  palette:
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black   # makes header black in dark mode
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  icon:
+    edit: material/pencil 
+    view: material/eye
+    repo: fontawesome/brands/git-alt   # GitHub icon in header
+    admonition:
+      info: material/information
+      tip: material/lightbulb-on
+
+# GitHub repo link (shows in header with icon)
+repo_url: https://github.com/bnsb-lab-iith/NAViFluX
+repo_name: NAViFluX   # will show next to icon
+repo_icon: fontawesome/brands/github
+
+# plugins:
+#   - git-revision-date-localized:
+#       enable_creation_date: true
+#       type: timeago   # "3 days ago" style (nicer than full date)
+#       fallback_to_build_date: true
+#   - git-committers:
+#       repository: your-username/your-repo
+#       branch: main
+#   - git-authors
+
+# plugins:
+#   - privacy
+
+# plugins:
+#   - git-committers:
+#       repository: https://github.com/bnsb-lab-iith/NAViFluX
+#       branch: main
+
+copyright: >
+  Copyright &copy; IIT Hyderabad - Biological Networks & Systems Biology Lab –
+  <a href="#__consent">Change cookie settings</a>
+
+markdown_extensions:
+  - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.arithmatex:
+        generic: true
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics: 
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - css/custom.css
