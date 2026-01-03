@@ -1,6 +1,6 @@
 # **Notations**
 
-In MATRIX, the metabolic network is represented as a **bipartite graph** consisting of two distinct node types:
+In NAViFluX, the metabolic network is represented as a **bipartite graph** consisting of two distinct node types:
 
 - **Reaction nodes** (representing biochemical reactions)
 - **Metabolite nodes** (representing chemical compounds)
