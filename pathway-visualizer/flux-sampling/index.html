@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../add-new-reaction/">
+        <link rel="prev" href="../delete-genes/">
       
       
-        <link rel="next" href="../merge-pathways/">
+        <link rel="next" href="../gsea/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Fill Missing Reaction - NAViFluX</title>
+        <title>Flux Sampling - NAViFluX</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about" class="md-skip">
+        <a href="#flux-sampling" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fill Missing Reaction
+              Flux Sampling
             
           </span>
         </div>
@@ -663,8 +663,6 @@
                 
   
   
-    
-  
   
   
     
@@ -680,11 +678,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
@@ -700,7 +698,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Pathway Editing
@@ -734,30 +732,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Fill Missing Reaction
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fill-missing-reaction/" class="md-nav__link">
         
   
   
@@ -768,75 +746,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      About
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#result-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Result table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assigning-subsystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assigning subsystem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Assigning subsystem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#case-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      CASE 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#case-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      CASE 2
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -900,6 +809,8 @@
                 
   
   
+    
+  
   
   
     
@@ -915,11 +826,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -935,7 +846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Analysis Features
@@ -1015,10 +926,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../flux-sampling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Flux Sampling
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1029,6 +960,93 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flux-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux Sampling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cellular-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cellular Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of Samples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-flux-sampling-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Flux Sampling Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1913,46 +1931,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#flux-sampling" class="md-nav__link">
     <span class="md-ellipsis">
-      About
+      Flux Sampling
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#result-table" class="md-nav__link">
+  <a href="#workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Result table
+      Workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assigning-subsystem" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
-      Assigning subsystem
+      Input
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Assigning subsystem">
+    <nav class="md-nav" aria-label="Input">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#case-1" class="md-nav__link">
+  <a href="#cellular-objective" class="md-nav__link">
     <span class="md-ellipsis">
-      CASE 1
+      Cellular Objective
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#case-2" class="md-nav__link">
+  <a href="#number-of-samples" class="md-nav__link">
     <span class="md-ellipsis">
-      CASE 2
+      Number of Samples
     </span>
   </a>
   
@@ -1960,6 +1978,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-flux-sampling-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Flux Sampling Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
   
 </li>
       
@@ -1979,7 +2015,7 @@
 
 
   
-    <a href="https://github.com/bnsb-lab-iith/NAViFluX/edit/master/docs/pathway-visualizer/fill-missing-reaction.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/bnsb-lab-iith/NAViFluX/edit/master/docs/pathway-visualizer/flux-sampling.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -1987,111 +2023,69 @@
   
 
 
-  <h1>Fill Missing Reaction</h1>
+  <h1>Flux Sampling</h1>
 
-<h3 id="about"><strong>About</strong></h3>
-<p>The <strong>Filling Missing Reactions</strong> feature helps fill gaps in metabolic pathways. By selecting two metabolites in the graph, the system queries the detected database (KEGG or BiGG) to fetch all possible reactions that connect them.  </p>
-<div class="admonition warning">
-<p class="admonition-title">Note</p>
-<p>The order of selection is important — the first metabolite is treated as the <strong>substrate</strong>, and the second as the <strong>product</strong>. </p>
-</div>
-<p>This feature is especially useful for:</p>
-<ul>
-<li>Identifying missing links in incomplete or draft models  </li>
-<li>Reconstructing pathways when certain reactions are absent in the uploaded network  </li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>It is recommended to understand the notations of nodes and edges to proceed further with the documentation. <a href="../notations/">Check out the Notations</a></p>
-</div>
+<h2 id="flux-sampling"><strong>Flux Sampling</strong></h2>
+<p>Flux Sampling generates a <strong>representative set of feasible flux distributions</strong> across the solution space of a metabolic model. While FBA returns a single optimal solution, flux sampling explores the <strong>entire range of possible steady-state flux values</strong>, providing a statistically rich view of metabolic capabilities.</p>
 <div class="admonition info">
-<p class="admonition-title">Note</p>
-<p>When a model is uploaded, the server automatically detects whether the model is from KEGG or BiGG. Based on the database, corresponding reactions will be fetched for the selected metabolite</p>
+<p class="admonition-title">Why is Flux Sampling useful</p>
+<p>Standard FBA and pFBA return a single flux distribution, which may not capture the full biological picture. Many different flux distributions can satisfy the same constraints, and the cell may not always operate at the mathematical optimum. Flux sampling addresses this by generating thousands of feasible solutions, enabling analysis of <strong>flux distributions</strong>, <strong>pathway usage frequencies</strong>, and <strong>metabolic flexibility</strong> without assuming a single objective.</p>
 </div>
-<p><img alt="Fill Missing Reaction" src="../../images/pathway-visualizer/fill-missing-reaction.png" /></p>
-<h3 id="result-table"><strong>Result table</strong></h3>
-<p>Each row in the table corresponds to a potential reaction that can be added to the model. </p>
-<table>
-<thead>
-<tr>
-<th><strong>Column</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Reaction</strong></td>
-<td>Identifier for the reaction (e.g., <code>PPC</code>, <code>ICL</code>)</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>Full name of the reaction (e.g., <em>Phosphoenolpyruvate carboxylase</em>)</td>
-</tr>
-<tr>
-<td><strong>Reaction string</strong></td>
-<td>Stoichiometric equation showing substrates and products (e.g., <code>PEP + CO₂ → OAA</code>)</td>
-</tr>
-<tr>
-<td><strong>Lower bound</strong></td>
-<td>Minimum allowable flux value (e.g., <code>0</code> for irreversible reactions). <strong>Default <code>-1000</code></strong></td>
-</tr>
-<tr>
-<td><strong>Upper bound</strong></td>
-<td>Maximum allowable flux value (e.g., <code>1000</code> for unconstrained forward flux). <strong>Default <code>1000</code></strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="assigning-subsystem"><strong>Assigning subsystem</strong></h3>
-<p>The <strong>Fill missing reaction</strong> follows a different approach to assign subsystem to the selected reaction. </p>
-<h5 id="case-1">CASE 1</h5>
-<p>When the selected metabolites are of the same subsystem </p>
-<table>
-<thead>
-<tr>
-<th><strong>Metabolite ID</strong></th>
-<th><strong>Full Name</strong></th>
-<th><strong>Subsystem</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>icit_c</code></td>
-<td>Isocitrate</td>
-<td>Citric Acid Cycle</td>
-</tr>
-<tr>
-<td><code>acon_c</code></td>
-<td>Aconitase</td>
-<td>Citric Acid Cycle</td>
-</tr>
-</tbody>
-</table>
-<p>In this situtation, the new selected reaction is added to <strong>Citric Acid Cycle</strong> by default.</p>
 <hr />
-<h5 id="case-2">CASE 2</h5>
-<p>When the selected metabolites are <strong>not</strong> of the same subsystem</p>
+<h2 id="workflow"><strong>Workflow</strong></h2>
+<p><img alt="Flux Sampling" src="../../images/pathway-visualizer/flux-sampling.png" /></p>
+<ol>
+<li>Select the <strong>"Flux Sampling"</strong> option under the <strong>Analysis Options</strong> dropdown.</li>
+<li>Choose the <strong>cellular objective</strong> function.</li>
+<li>Set the <strong>number of samples</strong> (default: 1000).</li>
+<li>Run the analysis — results will be downloaded automatically.</li>
+</ol>
+<hr />
+<h2 id="input"><strong>Input</strong></h2>
+<h3 id="cellular-objective">Cellular Objective</h3>
+<p>Select a <strong>cellular objective function</strong> (e.g., Biomass reaction) that defines the optimization target for constraining the solution space.</p>
+<h3 id="number-of-samples">Number of Samples</h3>
+<p>Specify the number of flux distributions to generate.</p>
 <table>
 <thead>
 <tr>
-<th><strong>Metabolite ID</strong></th>
-<th><strong>Full Name</strong></th>
-<th><strong>Subsystem</strong></th>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>icit_c</code></td>
-<td>Isocitrate</td>
-<td>Citric Acid Cycle</td>
-</tr>
-<tr>
-<td><code>q8_c</code></td>
-<td>Ubiquinone-8</td>
-<td>Oxidative Phosphorylation</td>
+<td><strong>Number of Samples</strong></td>
+<td>Total flux distributions to be sampled</td>
+<td><code>1000</code></td>
 </tr>
 </tbody>
 </table>
-<p>In this situation, you will be prompted a dropdown to select any of the above two subsystems</p>
+<div class="admonition tip">
+<p class="admonition-title">Choosing the number of samples</p>
+<p>A higher number of samples provides better statistical coverage of the solution space but increases computation time. The default of <strong>1000</strong> is sufficient for most analyses. For high-dimensional models or when precise distribution estimates are needed, consider increasing to <strong>5000–10000</strong>.</p>
+</div>
+<hr />
+<h2 id="how-flux-sampling-works"><strong>How Flux Sampling Works</strong></h2>
+<p>Flux sampling uses <strong>Monte Carlo-based methods</strong> (such as optGpSampler or ACHR — Artificially Centered Hit-and-Run) to draw random points from the feasible solution space defined by:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+S \cdot v &amp;= 0 \quad \text{(steady-state mass balance)} \\
+v_{\min} &amp;\le v \le v_{\max} \quad \text{(flux bounds)}
+\end{aligned}
+\]</div>
+<p>The sampler generates <span class="arithmatex">\(N\)</span> flux vectors <span class="arithmatex">\(\{v^{(1)}, v^{(2)}, \dots, v^{(N)}\}\)</span>, each satisfying the above constraints. Together, these samples characterize the <strong>shape and extent</strong> of the feasible flux space.</p>
+<p>From the sampled distributions, you can compute:</p>
+<ul>
+<li><strong>Mean flux</strong> for each reaction — expected metabolic activity</li>
+<li><strong>Standard deviation</strong> — variability of each reaction's flux</li>
+<li><strong>Flux histograms</strong> — distribution shape for individual reactions</li>
+<li><strong>Correlation between reactions</strong> — co-regulated or coupled pathways</li>
+</ul>
+<hr />
+<h2 id="output"><strong>Output</strong></h2>
+<p>The flux sampling results are <strong>downloaded</strong> as a file containing the sampled flux values for all reactions across the specified number of samples.</p>
 
 
 
@@ -2181,7 +2175,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../add-new-reaction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add New Reaction">
+          <a href="../delete-genes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Delete Genes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2191,20 +2185,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Add New Reaction
+                Delete Genes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../merge-pathways/" class="md-footer__link md-footer__link--next" aria-label="Next: Merge Pathways">
+          <a href="../gsea/" class="md-footer__link md-footer__link--next" aria-label="Next: Pathway Enrichment">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Merge Pathways
+                Pathway Enrichment
               </div>
             </div>
             <div class="md-footer__button md-icon">

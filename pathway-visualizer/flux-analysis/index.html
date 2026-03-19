@@ -14,7 +14,7 @@
         <link rel="prev" href="../centrality-analysis/">
       
       
-        <link rel="next" href="../gsea/">
+        <link rel="next" href="../delete-genes/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1001,6 +1001,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#blocked-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blocked Reactions
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1010,6 +1019,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-genes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delete Genes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flux-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flux Sampling
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1966,6 +2021,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#blocked-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blocked Reactions
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2101,9 +2165,9 @@ v_i = 0
 <p>Flux Variability Analysis quantifies the <strong>range of possible flux values</strong> for each reaction while still achieving the same optimal objective value. Unlike FBA, which returns a single flux distribution, FVA reveals <strong>alternative pathways</strong> and <strong>network flexibility</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Why was FVA developed</p>
-</div>
 <p>Standard FBA provides only one optimal solution, even though many equally optimal solutions may exist.
 FVA helps identify reactions that are <strong>rigid (fixed flux)</strong> versus <strong>flexible (variable flux)</strong> under the same biological objective.</p>
+</div>
 <p>For each reaction ( v_i ), FVA computes:</p>
 <ul>
 <li><strong>Minimum possible flux</strong></li>
@@ -2134,9 +2198,9 @@ FVA helps identify reactions that are <strong>rigid (fixed flux)</strong> versus
 <p>Single-Gene Deletion simulates the <strong>knockout of individual genes</strong> to assess their impact on network functionality and the objective value.</p>
 <div class="admonition info">
 <p class="admonition-title">Why Single-Gene Deletion is useful</p>
-</div>
 <p>Genes often control multiple reactions through gene–protein–reaction (GPR) associations.
 Deleting a gene allows identification of <strong>essential genes</strong> and <strong>genetic robustness</strong> in the metabolic network.</p>
+</div>
 <p>For a gene ( g ):</p>
 <ul>
 <li>All reactions associated with ( g ) (based on GPR rules) are constrained to zero flux:</li>
@@ -2150,6 +2214,33 @@ v_j = 0 \quad \forall j \in \text{reactions associated with } g
 <li>( Z_g = 0 ) → gene is <strong>essential</strong></li>
 <li>( Z_g &lt; Z^<em> ) → gene is </em><em>important but non-essential</em>*</li>
 <li>( Z_g = Z^<em> ) → gene deletion has </em><em>no effect</em>*</li>
+</ul>
+<hr />
+<h3 id="blocked-reactions">Blocked Reactions</h3>
+<p>Blocked reactions are reactions that <strong>cannot carry any flux</strong> under any feasible steady-state condition, given the network topology and flux bounds. Identifying these reactions helps reveal structural limitations, dead-end pathways, and gaps in the metabolic model.</p>
+<div class="admonition info">
+<p class="admonition-title">Why Blocked Reactions analysis is useful</p>
+<p>A metabolic model may contain reactions that are never active due to missing connections, incomplete pathways, or restrictive bounds.
+Detecting blocked reactions highlights <strong>network gaps</strong> and guides model curation by pinpointing areas that need additional reactions or corrected constraints.</p>
+</div>
+<p>A reaction <span class="arithmatex">\(v_j\)</span> is considered <strong>blocked</strong> if:</p>
+<div class="arithmatex">\[
+v_j^{\min} = v_j^{\max} = 0
+\]</div>
+<p>This is determined by solving two optimization problems for each reaction:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+v_j^{\min} &amp;= \min \, v_j \\
+v_j^{\max} &amp;= \max \, v_j \\
+\text{subject to} \quad &amp; S \cdot v = 0 \\
+&amp; v_{\min} \le v \le v_{\max}
+\end{aligned}
+\]</div>
+<p>If both the minimum and maximum flux are zero, the reaction is blocked.</p>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>Blocked reaction → reaction is <strong>structurally unable</strong> to carry flux</li>
+<li>Non-blocked reaction → reaction <strong>can participate</strong> in at least one feasible flux distribution</li>
 </ul>
 
 
@@ -2257,13 +2348,13 @@ v_j = 0 \quad \forall j \in \text{reactions associated with } g
         
         
           
-          <a href="../gsea/" class="md-footer__link md-footer__link--next" aria-label="Next: Pathway Enrichment">
+          <a href="../delete-genes/" class="md-footer__link md-footer__link--next" aria-label="Next: Delete Genes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pathway Enrichment
+                Delete Genes
               </div>
             </div>
             <div class="md-footer__button md-icon">
