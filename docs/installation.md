@@ -7,6 +7,9 @@ hide:
 
 In order to run the application on your system, it is essential to have these prerequisites installed on your computer. Please follow the steps below to set up the dependencies based on your current operating system.
 
+!!! tip "Video Tutorial"
+    A step-by-step video tutorial for the installation procedure is available on our YouTube channel: [**BNSB Lab - IITH**](https://www.youtube.com/@BNSBLab-IITH)
+
 ---
 
 ## NodeJS Installation
@@ -55,12 +58,12 @@ If both commands return version numbers, Node.js and npm have been installed suc
 
 ---
 
-## Python Installation (Python 3.13)
+## Python Installation (Python 3.12)
 
 
 ### **Step 1: Download Python**
 
-Go to the official Python website and download **Python 3.13** for your operating system:
+Go to the official Python website and download **Python 3.12** for your operating system:
 
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
@@ -71,7 +74,7 @@ Go to the official Python website and download **Python 3.13** for your operatin
   Download the **macOS universal installer**.
 
 * **Linux**
-  Use your system package manager **or** build from source (recommended for Python 3.13).
+  Use your system package manager **or** build from source (recommended for Python 3.12).
 
 ---
 
@@ -94,19 +97,19 @@ Go to the official Python website and download **Python 3.13** for your operatin
 
 ```bash
 sudo apt update
-sudo apt install python3.13 python3.13-venv python3.13-dev
+sudo apt install python3.12 python3.12-venv python3.12-dev
 ```
 
-> If Python 3.13 is not available via apt, install it from source:
+> If Python 3.12 is not available via apt, install it from source:
 
 ```bash
 sudo apt install build-essential libssl-dev zlib1g-dev \
 libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev \
 libgdbm-dev libbz2-dev liblzma-dev tk-dev wget
 
-wget https://www.python.org/ftp/python/3.13.0/Python-3.13.0.tgz
-tar -xf Python-3.13.0.tgz
-cd Python-3.13.0
+wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
+tar -xf Python-3.12.0.tgz
+cd Python-3.12.0
 ./configure --enable-optimizations
 make -j$(nproc)
 sudo make altinstall
@@ -131,7 +134,7 @@ python3 --version
 You should see output similar to:
 
 ```text
-Python 3.13.x
+Python 3.12.x
 ```
 
 ---
@@ -261,6 +264,44 @@ pip install -r requirements.txt
 flask run
 ```
 
+---
 
+## Performance Benchmarks
 
+The typical runtimes for three analyses implemented in NAViFluX are provided below. NAViFluX was tested on different machines with variable CPU, RAM, and OS configurations.
+
+Two GSMNs of different metabolite–reaction dimensions were used to evaluate the runtime performance:
+
+- **iJO1366** — 2583 Reactions, 1805 Metabolites
+- **RECON1** — 3741 Reactions, 2766 Metabolites
+
+---
+
+### **64 GB RAM, Intel i9 Processor, 32-Core CPU (Linux)**
+
+| Model    | Flux Variability Analysis | Single Rxn Deletion | Flux Sampling |
+| -------- | :-----------------------: | :-----------------: | :-----------: |
+| iJO1366  | 3.0196                    | 1.7292              | 35.2431       |
+| RECON1   | 7.7967                    | 3.5099              | 77.6662       |
+
+---
+
+### **16 GB RAM, Apple M4, 10-Core CPU (macOS)**
+
+| Model    | Flux Variability Analysis | Single Rxn Deletion | Flux Sampling |
+| -------- | :-----------------------: | :-----------------: | :-----------: |
+| iJO1366  | 20.691                    | 11.6096             | 49.5542       |
+| RECON1   | 36.216                    | 13.5691             | 106.8398      |
+
+---
+
+### **16 GB RAM, Intel i7 Processor, 4-Core CPU (Windows)**
+
+| Model    | Flux Variability Analysis | Single Rxn Deletion | Flux Sampling |
+| -------- | :-----------------------: | :-----------------: | :-----------: |
+| iJO1366  | 74.6648                   | 40.4138             | 96.3714       |
+| RECON1   | 113.658                   | 56.7247             | 781.1803      |
+
+!!! note
+    All values indicate NAViFluX analysis runtime in **CPU seconds**.
 

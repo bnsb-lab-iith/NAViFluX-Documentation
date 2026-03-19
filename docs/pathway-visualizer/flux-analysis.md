@@ -122,8 +122,8 @@ $$
 Flux Variability Analysis quantifies the **range of possible flux values** for each reaction while still achieving the same optimal objective value. Unlike FBA, which returns a single flux distribution, FVA reveals **alternative pathways** and **network flexibility**.
 
 !!! info "Why was FVA developed"
-Standard FBA provides only one optimal solution, even though many equally optimal solutions may exist.
-FVA helps identify reactions that are **rigid (fixed flux)** versus **flexible (variable flux)** under the same biological objective.
+    Standard FBA provides only one optimal solution, even though many equally optimal solutions may exist.
+    FVA helps identify reactions that are **rigid (fixed flux)** versus **flexible (variable flux)** under the same biological objective.
 
 For each reaction ( v_i ), FVA computes:
 
@@ -160,8 +160,8 @@ Where:
 Single-Gene Deletion simulates the **knockout of individual genes** to assess their impact on network functionality and the objective value.
 
 !!! info "Why Single-Gene Deletion is useful"
-Genes often control multiple reactions through gene–protein–reaction (GPR) associations.
-Deleting a gene allows identification of **essential genes** and **genetic robustness** in the metabolic network.
+    Genes often control multiple reactions through gene–protein–reaction (GPR) associations.
+    Deleting a gene allows identification of **essential genes** and **genetic robustness** in the metabolic network.
 
 For a gene ( g ):
 
@@ -178,4 +178,38 @@ Then solve **Standard FBA** or **Loopless FBA** to compute the new objective val
 * ( Z_g = 0 ) → gene is **essential**
 * ( Z_g < Z^* ) → gene is **important but non-essential**
 * ( Z_g = Z^* ) → gene deletion has **no effect**
+
+---
+
+### Blocked Reactions
+
+Blocked reactions are reactions that **cannot carry any flux** under any feasible steady-state condition, given the network topology and flux bounds. Identifying these reactions helps reveal structural limitations, dead-end pathways, and gaps in the metabolic model.
+
+!!! info "Why Blocked Reactions analysis is useful"
+    A metabolic model may contain reactions that are never active due to missing connections, incomplete pathways, or restrictive bounds.
+    Detecting blocked reactions highlights **network gaps** and guides model curation by pinpointing areas that need additional reactions or corrected constraints.
+
+A reaction $v_j$ is considered **blocked** if:
+
+$$
+v_j^{\min} = v_j^{\max} = 0
+$$
+
+This is determined by solving two optimization problems for each reaction:
+
+$$
+\begin{aligned}
+v_j^{\min} &= \min \, v_j \\
+v_j^{\max} &= \max \, v_j \\
+\text{subject to} \quad & S \cdot v = 0 \\
+& v_{\min} \le v \le v_{\max}
+\end{aligned}
+$$
+
+If both the minimum and maximum flux are zero, the reaction is blocked.
+
+**Interpretation:**
+
+* Blocked reaction → reaction is **structurally unable** to carry flux
+* Non-blocked reaction → reaction **can participate** in at least one feasible flux distribution
 

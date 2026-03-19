@@ -1852,54 +1852,48 @@
 <p>Step 1: Model selection</p>
 <p>The genome-scale metabolic model <a href="http://bigg.ucsd.edu/static/models/iJO1366.mat"><em>iJO1366</em></a> of <em>E. coli</em> was selected for this study.
 The model in .mat format was downloaded from the <a href="http://bigg.ucsd.edu/">BiGG</a> database and uploaded through Upload Options in NAViFluX.</p>
-<p>[Insert image]</p>
+<p><img alt="Model selection" src="../../images/case_study_2/Slide1.jpg" width="800" /></p>
 <p>Step 2: Mapping gene essentiality to reactions</p>
 <p>Genes from the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1681482/">KEIO library</a> were mapped to their corresponding reactions in the iJO1366 model using gene-reaction associations.
 Reactions associated with essential and non-essential genes were separated for comparative analysis.</p>
-<p>[Insert image]</p>
+<p><img alt="Mapping" src="../../images/case_study_2/Slide2.jpg" width="800" /></p>
 <p>Step 3: Setting up the metabolic environment</p>
 <p>The iJO1366 model was constrained to simulate growth in MOPS minimal medium.
 Environmental constraints were applied using the same procedure described in Case Study 1.</p>
-<p>[Insert image]</p>
+<p><img alt="constraint set up" src="../../images/case_study_2/Slide3.jpg" width="800" /></p>
 <p>Step 4: Cycle-free Flux Balance Analysis (cFBA)</p>
 <p>Cycle-free flux balance analysis (cFBA) was performed using the Flux Analysis module in NAViFluX.</p>
-<p>[Insert image]</p>
-<p>Step 5: Flux comparison between essential and non-essential reactions</p>
+<p><img alt="cFBA" src="../../images/case_study_2/Slide4.jpg" width="800" /></p>
 <p>Flux magnitudes of reactions associated with essential and non-essential genes were compared.
 Non-essential reactions exhibited larger flux magnitudes, whereas essential reactions carried lower but indispensable fluxes.</p>
-<p>[Insert image]</p>
-<p>Step 6: Single-gene deletion simulation and model evaluation</p>
+<p>Step 5: Single-gene deletion simulation and model evaluation</p>
 <p>Single-gene knockout simulations were performed in NAViFluX, available in "Flux Analyses" module.
 Predicted growth rates were compared against KEIO essentiality annotations.</p>
-<p>[Insert image]</p>
-<p>Step 7: Investigating incorrect predictions (PRPPS case)
+<p><img alt="SGD" src="../../images/case_study_2/Slide5.jpg" width="800" /></p>
+<p>Step 6: Investigating incorrect predictions (PRPPS case)
 Phosphoribosyl pyrophosphate synthetase (PRPPS) is experimentally essential for biomass synthesis.
-However, the default iJO1366 model predicted PRPPS to be non-essential. Exploration in NAViFluX revealed an alternative prpp synthesis route via Ribose-1,5-bisphosphokinase (R15BPK).</p>
-<p>[Insert image]</p>
-<p>Step 8: Constraint revision to remove alternative routes</p>
-<p>The R15BPK reaction was constrained to 0 mmol/(gDW·hr) to eliminate the alternative prpp synthesis route. This forced biomass production to depend on PRPPS.
-Similarly, glucose uptake via GLCptspp was partially constrained to maintain activity of HEX1, preserving realistic glucose catabolism.</p>
-<p>[Insert image]</p>
+However, the default iJO1366 model predicted PRPPS to be non-essential. Exploration in NAViFluX revealed an alternative prpp synthesis route via Ribose-1,5-bisphosphokinase (R15BPK).
+The R15BPK reaction was constrained to 0 mmol/(gDW·hr) to eliminate the alternative prpp synthesis route. This forced biomass production to depend on PRPPS.</p>
+<p><img alt="Correc PRPPS" src="../../images/case_study_2/Slide6.jpg" width="800" /></p>
+<p>Similarly, glucose uptake via GLCptspp was partially constrained to maintain activity of HEX1, preserving realistic glucose catabolism.</p>
+<p><img alt="Correct GLCptspp" src="../../images/case_study_2/Slide7.jpg" width="800" /></p>
 <p>After applying minimal internal constraint revisions, gene essentiality predictions were recomputed.
 The model performance improved slightly to an auROC of 0.76. </p>
-<p>Step 9: Constructing the prpp synthesis subnetwork.</p>
+<p>Step 7: Constructing the prpp synthesis sub network.</p>
 <p>To mechanistically study prpp synthesis, three subsystems were merged: Glycolysis, Pentose phosphate pathway, Histidine metabolism</p>
-<p>[Insert image]</p>
-<p>The resulting merged subnetwork represented net glucose catabolism towards prpp synthesis.</p>
-<p>Step 12: Wild-type flux distribution</p>
-<p>Cycle-free FBA was performed in the wild-type model using NAViFluX "Flux Analyses" module.</p>
-<p>[Insert image]</p>
-<p>Flux overlay showed that RPI-mediated oxidative PPP was the preferred route for prpp synthesis. This visualization was stored in NAViFluX’s native JSON format.</p>
-<p>[Insert image]</p>
-<p>Step 13: Single knockout of RPI</p>
+<p><img alt="subnetwork generation" src="../../images/case_study_2/Slide8.jpg" width="800" /></p>
+<p>The resulting merged sub network represented net glucose catabolism towards prpp synthesis.
+Cycle-free FBA was performed in the wild-type model using NAViFluX "Flux Analyses" module.
+Flux overlay showed that RPI-mediated oxidative PPP was the preferred route for prpp synthesis. This visualization was stored in NAViFluX’s native JSON format.</p>
+<p><img alt="merged" src="../../images/case_study_2/Slide9.jpg" width="800" /></p>
+<p>Step 8: Single knockout of RPI</p>
 <p>The RPI reaction was knocked out by fixing its flux bounds to zero.</p>
-<p>[Insert image]</p>
+<p><img alt="RPI KO" src="../../images/case_study_2/Slide10.jpg" width="800" /></p>
 <p>Following the knockout, prpp synthesis was rerouted entirely through the non-oxidative PPP, driven by TKT1 activity.</p>
-<p>[Insert image]</p>
-<p>Step 14: Double knockout of RPI and TKT1</p>
+<p>Step 9: Double knockout of RPI and TKT1</p>
 <p>A double knockout was simulated by constraining both RPI and TKT1 reactions to zero.
 This eliminated both oxidative and non-oxidative PPP routes.</p>
-<p>[Insert image]</p>
+<p><img alt="RPI-TKT1-KO" src="../../images/case_study_2/Slide11.jpg" width="800" /></p>
 <p>The double knockout confirmed that RPI and TKT1 form a synthetic essential pair for prpp-dependent biomass synthesis.</p>
 
 

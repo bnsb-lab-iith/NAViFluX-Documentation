@@ -49,6 +49,8 @@ Click on any feature below to learn more about its functionality and usage:
 
     - [Centrality Analysis](pathway-visualizer/centrality-analysis.md)  
     - [Flux Analysis](pathway-visualizer/flux-analysis.md)  
+    - [Delete Genes](pathway-visualizer/delete-genes.md)
+    - [Flux Sampling](pathway-visualizer/flux-sampling.md)
     - [Pathway Enrichment](pathway-visualizer/gsea.md)
     - [Over Representation Analysis](pathway-visualizer/over-representation-analysis.md)
 
